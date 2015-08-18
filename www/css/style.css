@@ -1,0 +1,14 @@
+/* Empty. Add your own CSS if you like */
+.angular-google-map-container { height: 300px; width: 300px;}
+.item-divider {
+	background-color: #4d1979;
+	color: #fff;
+	position: relative;
+	text-transform: uppercase;
+}
+.game-date {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 8px 16px;
+}

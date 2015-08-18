@@ -150,9 +150,11 @@ function subscribe() {
 
 // Once the service worker is registered set the initial state
 function initialiseState() {
+  console.log(ServiceWorkerRegistration.prototype);
+  console.log(Notification.permission);
   // Are Notifications supported in the service worker?
   if (!('showNotification' in ServiceWorkerRegistration.prototype)) {
-    window.Demo.debug.log('Notifications aren\'t supported.');
+    console.log('Notifications aren\'t supported.');
     return;
   }
 
@@ -160,18 +162,20 @@ function initialiseState() {
   // If its denied, it's a permanent block until the
   // user changes the permission
   if (Notification.permission === 'denied') {
-    window.Demo.debug.log('The user has blocked notifications.');
+    console.log('The user has blocked notifications.');
     return;
   }
 
   // Check if push messaging is supported
   if (!('PushManager' in window)) {
-    window.Demo.debug.log('Push messaging isn\'t supported.');
+    console.log('Push messaging isn\'t supported.');
     return;
   }
 
   // We need the service worker registration to check for a subscription
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+
+    console.log(serviceWorkerRegistration);
     // Do we already have a push message subscription?
     serviceWorkerRegistration.pushManager.getSubscription()
       .then(function(subscription) {
@@ -214,8 +218,9 @@ window.addEventListener('load', function() {
 
   // Check that service workers are supported, if so, progressively
   // enhance and add push messaging support, otherwise continue without it.
+  console.log(navigator);
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('shared/services/web-push/service-worker.js')
+    navigator.serviceWorker.register('./service-worker.js')
     .then(initialiseState);
   } else {
     window.Demo.debug.log('Service workers aren\'t supported in this browser.');

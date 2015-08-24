@@ -33,15 +33,10 @@ function sendSubscriptionToServer(subscription) {
   // to your server and save it to send a
   // push message at a later date
   //
-  // For compatibly of Chrome 43, get the endpoint via
-  // endpointWorkaround(subscription)
   console.log('TODO: Implement sendSubscriptionToServer()');
 
-  var mergedEndpoint = endpointWorkaround(subscription);
+  var endpoint = subscription.endpoint;
 
-  // This is just for demo purposes / an easy to test by
-  // generating the appropriate cURL command
-  // showCurlCommand(mergedEndpoint);
 }
 
 // NOTE: This code is only suitable for GCM endpoints,

@@ -1,0 +1,5 @@
+curl --header "Authorization: key=AIzaSyBZ7lJwVf5FmaENkLtCSAJ2iW0vGJ5hS38" --header "Content-Type:application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"APA91bHyFI-t3FjpHDisOv0HOzEptyaBqhXeB0b22X-bjCOra3GA6JqxaJLZdV2POcoQbklXxkRjDI7REuCAusHOPsSiZ0GVM8JNB_IMDsz_IzZYD0xPX9TJRvB82VfuuBIa97us0s1yiY71SGuhGhluM3-ptam2Du7-8X_jwFcuo8eG7EWHGm4\"]}" --insecure
+
+
+
+curl --header "Authorization: key=AIzaSyBZ7lJwVf5FmaENkLtCSAJ2iW0vGJ5hS38" --header "Content-Type:application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"APA91bH13OTMqNrFt69sj0A1Y73t33Za1eE7_GfMQ0L-jwQ3NoYXlyMe2gkQ60Y4SmgJaWXF_DZVatmJGJVKxRNxjn_4JfURNc0OyrfzK61_w_BWSJgFlLjbRGvou4a8ybR2-rTVF7rsK8D72kObsoQcw4BSlmhhpMSZYjIjm2ie2tP0ZvtPpQ_G_k-K7MlQDOpNI91stYQ8\"]}" --insecure

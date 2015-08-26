@@ -1,0 +1,151 @@
+/* Empty. Add your own CSS if you like */
+body {
+	font-family: 'Source Sans Pro';
+}
+.bar {
+	// background-color: #000 !important;
+
+	.title {
+		// color: #fff !important;
+		font-weight: 900;
+	}
+}
+.map-container {
+	// display:none;
+	margin-top: 10px;
+}
+.angular-google-map-container { height: 300px; width: 300px;}
+.item-divider {
+	background-color: #4d1979;
+	border: 1px solid #4d1979;
+	color: #fff;
+	position: relative;
+	text-transform: uppercase;
+}
+.game {
+	border-top: 3px solid #4d1979;
+}
+
+.item-text-wrap {
+	float:left;
+	width: 100%;
+	padding: 1em;
+}
+.game-date-wrap {
+	float: left;
+    padding-right: 1em;
+    margin-right: 1em;
+    border-right: 1px solid #ccc;
+    background-color: #4d1979;
+    margin: -1em -1em 1em -1em;
+    padding: .5em 1em .75em;
+    color: #fff;
+    text-align: left;
+}
+// .game-date-main,
+// .game-time-main {
+// 	display: inline-block;
+// 	margin-right: 1em;
+// }
+
+.game-date-main {
+		
+		line-height: 1;
+		text-align: center;
+		font-size: 32px;
+		font-weight: 900;
+		
+		.month {
+		    line-height: 1;
+		}
+
+		.day {
+			// font-weight: 300;
+			
+			// letter-spacing: -2px;
+		}
+	}
+
+	.game-time-main {
+		margin-right: 0;
+		line-height: 1;
+		text-align: center;
+		//float:right;
+		font-size: 1.3em;
+	}
+
+@media (min-width: 600px) {
+	.game-date-wrap {
+		float: left;
+	    padding-right: 1em;
+	    margin-right: 1em;
+	    border-right: 1px solid #ccc;
+	    background-color: #4d1979;
+	    margin: -1em -1em -1em -1em;
+	    padding: 1em;
+	    color: #fff;
+	    text-align: center;
+	}
+	.game-date-main {
+		display: block;
+		margin-right: 0;
+		line-height: 1;
+		text-align: center;
+
+		.month {
+		    display: block;
+		    text-transform: uppercase;
+		    font-size: 1.25em;
+		    line-height: 1;
+		    font-weight: 400;
+		}
+
+		.day {
+			font-weight: 300;
+			font-size: 2.75em;
+			letter-spacing: -2px;
+		}
+	}
+
+	.game-time-main {
+		display: block;
+		margin-right: 0;
+		border-top: 1px solid #ccc;
+		margin-top: 5px;
+		padding-top: 5px;
+		line-height: 1;
+		text-align: center;
+		float:none;
+	}
+
+	.item-main-text-wrap {
+		float:left;
+		margin-left: 2em;
+	}
+}
+
+.item {
+
+	p {
+		font-size: 18px;
+		margin-bottom: 10px;
+		text-align: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.icon {
+		margin-right: 5px;
+	}
+	.opponent {
+		color: #333;
+		font-size: 30px;
+		font-style: italic;
+		font-weight: 900;
+		text-align: center;
+		line-height: 1;
+		margin: 10px 15px 20px 15px;
+	}
+}

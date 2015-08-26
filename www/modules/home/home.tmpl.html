@@ -1,0 +1,32 @@
+<ion-view>
+	<ion-content class="padding">
+		<div class="card list game" ng-repeat="game in home.games | orderBy: 'week'">
+			<!-- div class="item item-divider">
+			
+			</div -->
+			<div class="item row responsive-sm item-text-wrap">
+				<div class="game-date-wrap">
+					<div class="game-date-main">
+						<span class="month">{{ game.gameDateAndTime | date: 'MMMM'}}</span>
+						<span class="day">{{ game.gameDateAndTime | date: 'd'}}</span>
+					</div>
+					<div class="game-time-main">
+						<span class="time">{{ game.gameDateAndTime | date: 'shortTime'}}</span>
+					</div>
+				</div>
+				<div class="item-main-text-wrap">
+					<p class="opponent">{{ game.opponent }}</p>
+					<!-- p><strong>When:</strong> {{ game.gameDateAndTime | date: 'h:mma M/d/yyyy' }}</p -->
+					<p class="location" ng-click="showmap = !showmap"><i class="icon ion-location"></i>{{ game.stadium }}</p>
+					<p><i class="icon ion-monitor"></i>{{ game.tvInformation }}</p>
+				</div>
+				<div class="map-container" ng-if="showmap">
+					<ui-gmap-google-map center="game.map.center" zoom="game.map.zoom" options="game.map.options">
+						<ui-gmap-marker coords="game.marker.coords" options="game.marker.options" idkey="game.marker.id">
+		        		</ui-gmap-marker>
+					</ui-gmap-google-map>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

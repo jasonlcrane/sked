@@ -7743,8 +7743,7 @@ body {
     background-color: #4d1979;
     margin: -1em -1em -1em -1em;
     padding: 1em;
-    color: #fff;
-    text-align: center; }
+    color: #fff; }
   .game-date-main {
     display: block;
     margin-right: 0;
@@ -7789,3 +7788,7 @@ body {
   text-align: center;
   line-height: 1;
   margin: 10px 15px 20px 15px; }
+
+@media (min-width: 600px) {
+  .item p, .opponent {
+    text-align: left; } }

@@ -26,6 +26,15 @@ angular.module('sked')
 					});
 			}
 
+			home.filterTime = function(datetime) {
+				console.log(datetime);
+				var time = 'Time TBA';
+				if (datetime.indexOf('T') !== -1) {
+					var time = datetime;
+				}
+				return time;
+			}
+
 			var parseGames = function() {
 				angular.forEach(home.tmpGames, function(game, i) {
 					console.log(game);
@@ -58,7 +67,7 @@ angular.module('sked')
 			}
 
 			uiGmapGoogleMapApi.then(function(maps) {
-				console.log('maps');
+				// console.log('maps');
 				// map = 
     		});
 

@@ -26,9 +26,17 @@ angular.module('sked')
 					});
 			}
 
+			home.filterTime = function(datetime) {
+				var time = 'Time TBA';
+				if (datetime.indexOf('T') !== -1) {
+					var time = datetime;
+				}
+				return time;
+			}
+
 			var parseGames = function() {
 				angular.forEach(home.tmpGames, function(game, i) {
-					console.log(game);
+					// console.log(game);
 					var marker = makeMarker(i, game.fields.gameLocation.lat, game.fields.gameLocation.lon);
 					game.fields.marker = marker;
 					var map = makeMap(game.fields.gameLocation.lat, game.fields.gameLocation.lon);
@@ -53,12 +61,11 @@ angular.module('sked')
 			    return marker;
 			}
 			var makeMap = function(lat, lng) {
-				console.log(lat);
 				return { center: { latitude: lat, longitude: lng }, zoom: 14 };
 			}
 
 			uiGmapGoogleMapApi.then(function(maps) {
-				console.log('maps');
+				// console.log('maps');
 				// map = 
     		});
 

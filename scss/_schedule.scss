@@ -3,10 +3,12 @@ body {
 	font-family: 'Source Sans Pro';
 }
 .bar {
-	// background-color: #000 !important;
+	background-color: #000 !important;
+	border-bottom: 5px solid #fff !important;
+	height: 50px !important;
 
 	.title {
-		// color: #fff !important;
+		color: #fff !important;
 		font-weight: 900;
 	}
 }
@@ -14,7 +16,7 @@ body {
 	// display:none;
 	margin-top: 10px;
 }
-.angular-google-map-container { height: 300px; width: 300px;}
+.angular-google-map-container { height: 300px; min-width: 300px;}
 .item-divider {
 	background-color: #4d1979;
 	border: 1px solid #4d1979;

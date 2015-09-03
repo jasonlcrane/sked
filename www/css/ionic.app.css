@@ -7679,15 +7679,20 @@ a.button {
 body {
   font-family: 'Source Sans Pro'; }
 
-.bar .title {
-  font-weight: 900; }
+.bar {
+  background-color: #000 !important;
+  border-bottom: 5px solid #fff !important;
+  height: 50px !important; }
+  .bar .title {
+    color: #fff !important;
+    font-weight: 900; }
 
 .map-container {
   margin-top: 10px; }
 
 .angular-google-map-container {
   height: 300px;
-  width: 300px; }
+  min-width: 300px; }
 
 .item-divider {
   background-color: #4d1979;

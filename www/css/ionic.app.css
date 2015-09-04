@@ -7675,7 +7675,6 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-/* Empty. Add your own CSS if you like */
 body {
   font-family: 'Source Sans Pro'; }
 
@@ -7780,7 +7779,7 @@ body {
     margin-bottom: 0; }
 .item .icon {
   margin-right: 5px; }
-.item .opponent {
+.item .opponent, .item .score {
   color: #333;
   font-size: 30px;
   font-style: italic;
@@ -7788,7 +7787,17 @@ body {
   text-align: center;
   line-height: 1;
   margin: 10px 15px 20px 15px; }
+.item .score {
+  font-style: normal; }
+
+.win-loss {
+  color: #fff;
+  background-color: #4d1979;
+  display: inline-block;
+  padding: 3px 10px;
+  font-style: normal;
+  margin-right: 5px; }
 
 @media (min-width: 600px) {
-  .item p, .opponent {
+  .item p, .opponent, .item .score {
     text-align: left; } }

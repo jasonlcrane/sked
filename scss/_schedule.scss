@@ -1,4 +1,5 @@
-/* Empty. Add your own CSS if you like */
+$purple: #4d1979;
+
 body {
 	font-family: 'Source Sans Pro';
 }
@@ -18,8 +19,8 @@ body {
 }
 .angular-google-map-container { height: 300px; min-width: 300px;}
 .item-divider {
-	background-color: #4d1979;
-	border: 1px solid #4d1979;
+	background-color: $purple;
+	border: 1px solid $purple;
 	color: #fff;
 	position: relative;
 	text-transform: uppercase;
@@ -150,6 +151,21 @@ body {
 		line-height: 1;
 		margin: 10px 15px 20px 15px;
 	}
+
+	.score {
+		@extend .opponent;
+		font-style: normal;
+	}
+}
+
+
+.win-loss {
+	color: #fff;
+    background-color: $purple;
+    display: inline-block;
+    padding: 3px 10px;
+    font-style: normal;
+    margin-right: 5px;
 }
 
 @media (min-width: 600px) {

@@ -1,9 +1,6 @@
 <ion-view>
 	<ion-content class="padding">
 		<div class="card list game" ng-repeat="game in home.games | orderBy: 'week'">
-			<!-- div class="item item-divider">
-			
-			</div -->
 			<div class="item row responsive-sm item-text-wrap">
 				<div class="game-date-wrap">
 					<div class="game-date-main">
@@ -11,16 +8,23 @@
 						<span class="day">{{ game.gameDateAndTime | date: 'd'}}</span>
 					</div>
 					<div class="game-time-main">
-						<span class="time">{{ home.filterTime(game.gameDateAndTime) | date: 'shortTime'}}</span>
+						<span ng-if="!game.score" class="time">{{ home.filterTime(game.gameDateAndTime) | date: 'shortTime'}}</span>
 					</div>
 				</div>
 				<div class="item-main-text-wrap">
 					<p class="opponent">{{ game.opponent }}</p>
+					<p ng-if="game.score" class="score">
+						<span class="win-loss" ng-if="game.win">W</span>
+						<span class="win-loss" ng-if="!game.win">L</span>
+						{{game.score}}
+					</p>
 					<!-- p><strong>When:</strong> {{ game.gameDateAndTime | date: 'h:mma M/d/yyyy' }}</p -->
-					<p class="location" ng-click="showmap = !showmap"><i class="icon ion-location"></i>{{ game.stadium }}</p>
-					<p><i class="icon ion-monitor"></i>{{ game.tvInformation }}</p>
+					<div class="pre-game-info" ng-if="!game.score">
+						<p class="location" ng-click="showmap = !showmap"><i class="icon ion-location"></i>{{ game.stadium }}</p>
+						<p><i class="icon ion-monitor"></i>{{ game.tvInformation }}</p>
+					</div>
 				</div>
-				<div class="map-container" ng-if="showmap">
+				<div class="map-container" ng-if="showmap && !game.score">
 					<ui-gmap-google-map center="game.map.center" zoom="game.map.zoom" options="game.map.options" controls="{mapTypeControl: false}">
 						<ui-gmap-marker coords="game.marker.coords" options="game.marker.options" idkey="game.marker.id">
 		        		</ui-gmap-marker>
